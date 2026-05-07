@@ -1,0 +1,38 @@
+/*.page-container{
+ min-height:10vh;
+ 
+}*/
+.header-container{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  border:solid 1px gray;
+  padding:10px;
+  background-color: #150c25;
+  color:white;
+font-weight:bold;
+}
+.header-container div{
+  background-color: transparent;
+  border:solid 2px white;
+  padding:10px;
+  border-radius:10px;
+}
+@media (max-width:420px){
+  .header-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #150c25;
+    color:white;
+    font-weight:bold;
+    font-family: Arial;
+    font-size:17px;
+    border-radius:10px;
+  }
+  .header-container div{
+    border:solid white 2px;
+    padding:2px;
+
+  }
+}

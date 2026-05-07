@@ -1,0 +1,160 @@
+body{
+  font-family:Arial;
+  font-weight:500;
+  background-color:#f7f7f7;
+}
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+html,body{
+ height:100%;
+ width:100%;  
+}
+.page-container{
+ min-height:100vp;
+  justify-content: center;
+  align-items: cenetr;
+}
+/*.header-container{
+  display:flex;
+  flex-direction: column;
+  width:100vw;
+}
+.title-container{
+  display:flex;
+  justify-content: space-between;
+}
+.progress-container{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top:10px;
+  height:5vh;
+}
+.progress-text,.time-tracker{
+ color:red;
+}*/
+/*
+.Questions-container{
+  display:flex;
+  flex-direction:column;
+  width:100vw;
+  height:75vh;
+  row-gap:10vh;
+}
+.question-text-container{
+  height:6vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+ 
+}
+.question-number,.question-text{
+  color:green;
+  font-size:24px;
+}*/
+/*.option-goto-container{
+  display:flex;
+}
+.goto-container{
+  display:flex;
+  width:50vw;
+}
+.option-container{
+  height:5vh;
+  color:blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left:2vh;
+  row-gap:40px;
+  cursor:Pointer;
+  width:50vw;
+}
+.option-container div{
+  padding:2vh;
+  font-size:20px;
+  box-shadow:inset 0.5px 0.5px 1px black;
+  border-radius:20px;
+}
+.option-container div:hover{
+  background-color:rgb(255, 255, 255);
+}
+.option-container div:active{
+  opacity:0.76;
+}*/
+/*.nav-container{
+  display:flex;
+  justify-content:space-between;
+  height:15vh;
+}
+.nav-container button{
+  padding:10px;
+  cursor:pointer;
+    border-radius:10px;
+}
+.nav-container button:hover{
+  opacity:0.7;
+}
+.nav-container button:active{
+  border:none;
+}
+.previous-button{
+  background-color:yellow;
+
+}
+.next-button{
+  background-color:green;
+  color:white;
+}
+.goto-button{
+  background-color:orange;
+}
+
+*/
+.submit-notification{
+  display: flex;
+  background-color:black;
+  position:fixed;
+  color:RED;
+  top:30%;
+  left:20%;
+  padding:100px;
+}
+
+.question-button{
+  background-color:green;
+  color:white;
+  margin:0.5px;
+}
+.question-button:hover{
+  opacity:0.6;
+}
+@media (max-width:412px){
+  .question-button{
+    margin:0;
+    font-weight: bold;
+    font-size:10px;
+  }
+}
+.question-button:active{
+  background-color: white;
+  color:black;
+}
+.current-index{
+  background-color:white;
+  color:black;
+  box-shadow: gray 2px 2px 2px ;
+  border:solid 1px gray;
+  font-weight: bold;
+}
+.is_answered{
+  background-color:rgb(61, 188, 234);
+  color:white;
+}
+.last-index{
+  opacity:0.5;   
+  border:none;                                        
+}
