@@ -1,5 +1,5 @@
 
-import { showQuestion,saveAction,displayAnswer} from '/quiz-js/tracker.js';
+import { showQuestion,saveAction,displayAnswer} from './tracker.js';
 import {UserAction } from './result.js';
 import { Autosave } from './auto-save.js';
 import { quiz } from './questions.js';
