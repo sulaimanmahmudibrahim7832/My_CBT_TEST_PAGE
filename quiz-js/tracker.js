@@ -1,6 +1,7 @@
 import { index, answers, options,questionSpan,buttons_Array} from "./quiz.js";
 import { quiz } from "./questions.js";
-export function displayAnswer(index) {
+export{displayAnswer,showQuestion};
+ function displayAnswer(index) {
   
     for (let i = 0; i < buttons_Array.length; i++) {
       buttons_Array[index].classList.add("is_answered");
@@ -15,7 +16,7 @@ function saveAction() {
 }
 }
 
-export function showQuestion() {
+function showQuestion() {
   const Qnumber = document.querySelector(".question-number");
   const Qtext = document.querySelector('.question-text');
   const QoptionA = document.querySelector(".optionA");
@@ -43,12 +44,12 @@ export function showQuestion() {
         answers[index] = input.value;
         displayAnswer(index);
       });
-      //let save = answers[index];
+
       saveAction();
     });
   };
 
 
  
-  //console.log(answers[index]);
+  
 export{saveAction}
