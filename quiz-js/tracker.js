@@ -1,5 +1,5 @@
-import { index, answers, options,questionSpan,buttons_Array} from "/quiz-js/quiz.js";
-import { quiz } from "/quiz-js/questions.js";
+import { index, answers, options,questionSpan,buttons_Array} from "./quiz.js";
+import { quiz } from "./questions.js";
 export function displayAnswer(index) {
   
     for (let i = 0; i < buttons_Array.length; i++) {
