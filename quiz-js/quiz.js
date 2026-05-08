@@ -4,7 +4,7 @@ import {UserAction } from './result.js';
 import { Autosave } from './auto-save.js';
 import { quiz } from './questions.js';
 export { index, options, answers, notificationContainer, questionSpan, 
-buttonsArray };
+buttons_Array };
  const notificationContainer = document.querySelector(".submit-notification");
   const body = document.querySelector("body");
 const previosButton = document.querySelector(".previous-button");
