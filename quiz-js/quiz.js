@@ -12,6 +12,7 @@ document.querySelector(".goto-container").style.display = "none";
 
 
 let GotoButtonsHtml = '';
+
  const QoptionA = document.querySelector(".optionA");
  const QoptionB = document.querySelector(".optionB");
  const QoptionC = document.querySelector(".optionC");
