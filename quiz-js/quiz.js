@@ -1,4 +1,4 @@
-//console.log("quized");
+
 import { showQuestion,saveAction,displayAnswer} from '/quiz-js/tracker.js';
 import {UserAction } from './result.js';
 import { Autosave } from './auto-save.js';
