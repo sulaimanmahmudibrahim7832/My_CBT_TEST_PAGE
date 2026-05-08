@@ -1,5 +1,6 @@
 import { UserAction } from "./result.js";
-export function Autosave() {
+export {Autosave}
+ function Autosave() {
   const Timer = document.querySelector(".time-tracker");
   let Total = 0.5 * 3600;
   setInterval(() => {
@@ -10,7 +11,6 @@ export function Autosave() {
     Timer.style.display = "inline-block";
      Timer.innerHTML =`0${Hours}:${minutes}:${seconds}`;
     if (Total === 0) {
-      //UserAction()
       document.body.innerHTML = `
        <div> Your CBT is under review  </div>
            </div>-->
