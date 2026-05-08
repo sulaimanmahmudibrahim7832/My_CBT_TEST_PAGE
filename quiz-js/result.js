@@ -1,4 +1,4 @@
-import {  answers, index,notificationContainer } from "/quiz-js/quiz.js";
+import {  answers, index,notificationContainer } from "./quiz.js";
 import { quiz } from "/quiz-js/questions.js";
  export const result = {
   corrects: 0,
