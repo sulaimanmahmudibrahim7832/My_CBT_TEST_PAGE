@@ -3,8 +3,21 @@ import { showQuestion,displayAnswer} from './tracker.js';
 import {UserAction } from './result.js';
 import { Autosave } from './auto-save.js';
 import { quiz } from './questions.js';
-export{notificationContainer,index,options,answers}
+export{notificationContainer,index,options,answers,buttons_Array}
  const notificationContainer = document.querySelector(".submit-notification");
+  const body = document.querySelector("body");
+const previosButton = document.querySelector(".previous-button");
+const nextButton = document.querySelector(".next-button");
+const submitButton = document.querySelector(".submit-button");
+const gotoButton = document.querySelector('.goto-button');
+const questionSpan = document.querySelector('.question-progress');
+const totalQuestions = document.querySelector('.total-questions');
+ const QoptionA = document.querySelector(".optionA");
+ const QoptionB = document.querySelector(".optionB");
+ const QoptionC = document.querySelector(".optionC");
+ const QoptionD = document.querySelector(".optionD");
+const options = document.querySelectorAll("input[name='a']");
+
 
   notificationContainer.style.display = "none";
 document.querySelector(".goto-container").style.display = "none";
@@ -13,14 +26,9 @@ document.querySelector(".goto-container").style.display = "none";
 
 let GotoButtonsHtml = '';
 
- const QoptionA = document.querySelector(".optionA");
- const QoptionB = document.querySelector(".optionB");
- const QoptionC = document.querySelector(".optionC");
- const QoptionD = document.querySelector(".optionD");
 
    let index = 0;
   const lastIndex = quiz.length - 1;
- const options = document.querySelectorAll("input[name='a']");
  let answers = Array(quiz.length).fill(null);
 totalQuestions.innerHTML = `${quiz.length}`;
 showQuestion();
@@ -51,8 +59,6 @@ body.addEventListener('keydown', () => {
     displayAnswer(index);
   }
   else if (event.key.toUpperCase() === "c".toUpperCase()) {
-    //console.log("C has pressed")
-     //input.checked = true;
     options[2].checked = true;
     answers[index] = options[2].value;
     displayAnswer(index);
@@ -127,14 +133,13 @@ document.querySelector(".goto-container").innerHTML = `<div>${GotoButtonsHtml}</
 <span class="closed-button">X</span>
    </div>`;
 const closedButton = document.querySelector(".closed-button");
-//console.log(closedButton);
 closedButton.addEventListener("click",button=> {
   document.querySelector(".goto-container").style.display = "none";
 });
 gotoButton.addEventListener('click', () => {
   document.querySelector(".goto-container").style.display = "flex";
 });
-export const buttons_Array = document.querySelectorAll(".goto-container button");
+ const buttons_Array = document.querySelectorAll(".goto-container button");
 
 
 
