@@ -3,7 +3,8 @@ import { showQuestion,displayAnswer} from './tracker.js';
 import {UserAction } from './result.js';
 import { Autosave } from './auto-save.js';
 import { quiz } from './questions.js';
-export{notificationContainer,index,options,answers,buttons_Array}
+export { index, options, answers, notificationContainer, questionSpan, 
+buttonsArray };
  const notificationContainer = document.querySelector(".submit-notification");
   const body = document.querySelector("body");
 const previosButton = document.querySelector(".previous-button");
