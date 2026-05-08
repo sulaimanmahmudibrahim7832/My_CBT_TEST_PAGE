@@ -279,16 +279,8 @@ optionA: "4",
     correct:"C"
   },
 
-  /*{
-      questionId: "31",
-      questionText: "which of the following is not an example of noun ",
-      optionA: "is",
-      optionB: "goat",
-      optionC: "above",
-    optionD: "blow",
-      Correct:"B"
-}
-, {
+  /*
+{
       questionId: "32",
       questionText: "Programming language is simple ",
       optionA: "Yes",
