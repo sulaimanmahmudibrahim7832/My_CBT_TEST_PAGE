@@ -1,4 +1,4 @@
-import { UserAction } from "/quiz-js/result.js";
+import { UserAction } from "./result.js";
 export function Autosave() {
   const Timer = document.querySelector(".time-tracker");
   let Total = 0.5 * 3600;
