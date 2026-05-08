@@ -1,6 +1,7 @@
 import {  answers, index,notificationContainer } from "./quiz.js";
-import { quiz } from "/quiz-js/questions.js";
- export const result = {
+import { quiz } from "./questions.js";
+
+  const result = {
   corrects: 0,
   skips: 0,
   wrongs:0
@@ -63,12 +64,7 @@ export function UserAction() {
     <div>your result will be send to your Email after 24 hours of submittion 
     <br> thank you </div>
     `;
-   /* alert(`total = ${result.corrects + result.wrongs + result.skips},
-  marks = ${result.corrects},
-  skips = ${result.skips}
-  ${(result.corrects)}/${(result.corrects+result.wrongs+result.skips)}
-  
-  `);*/
+ 
     
     
   });
