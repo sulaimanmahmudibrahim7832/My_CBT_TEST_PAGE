@@ -3,7 +3,8 @@ import { showQuestion,saveAction,displayAnswer} from '/quiz-js/tracker.js';
 import {UserAction } from './result.js';
 import { Autosave } from './auto-save.js';
 import { quiz } from './questions.js';
-export const notificationContainer = document.querySelector(".submit-notification");
+export{notificationContainer,index,options,answers}
+ const notificationContainer = document.querySelector(".submit-notification");
 
   notificationContainer.style.display = "none";
 document.querySelector(".goto-container").style.display = "none";
@@ -15,16 +16,7 @@ let GotoButtonsHtml = '';
 
 })
   
-};*/
-/*function clearUserState() {
-  optA.checked = false;
-  optB.checked = false;
-  optC.checked = false;
-  optD.checked = false;
-}*/
-
-
-
+};
 
 
 
@@ -34,16 +26,15 @@ let GotoButtonsHtml = '';
  const QoptionC = document.querySelector(".optionC");
  const QoptionD = document.querySelector(".optionD");
 
-  export let index = 0;
+   let index = 0;
   const lastIndex = quiz.length - 1;
-export const options = document.querySelectorAll("input[name='a']");
-export let answers = Array(quiz.length).fill(null);
+ const options = document.querySelectorAll("input[name='a']");
+ let answers = Array(quiz.length).fill(null);
 totalQuestions.innerHTML = `${quiz.length}`;
 showQuestion();
 
 
 body.addEventListener('keydown', () => {
-  //console.log(key === "keyN");
   if (event.key.toUpperCase() === "n".toUpperCase()) {
     nextAction();
   }
@@ -54,20 +45,15 @@ body.addEventListener('keydown', () => {
     document.querySelector(".goto-container").style.display = "flex";
   }
   else if (event.key.toUpperCase() === 's'.toUpperCase()) {
-    //renderResultPreview();
     UserAction()
   }
  
   else if (event.key.toUpperCase() === 'a'.toUpperCase()) {
-    //console.log("A has pressed")
-     //input.checked = true;
     options[0].checked = true;
     answers[index] = options[0].value;
     displayAnswer(index);
   }
   else if (event.key.toUpperCase() === 'b'.toUpperCase()) {
-    //console.log("B was pressed");
-     //input.checked = true;
     options[1].checked = true;
     answers[index] = options[1].value;
     displayAnswer(index);
@@ -80,8 +66,6 @@ body.addEventListener('keydown', () => {
     displayAnswer(index);
   }
   else if (event.key.toUpperCase() === "d".toUpperCase()) {
-    //console.log("D has pressed");
-     //input.checked = true;
     options[3].checked = true;
     answers[index] = options[3].value;
     displayAnswer(index);
@@ -115,7 +99,7 @@ function nextAction() {
   }
   if (index === lastIndex) {
     nextButton.classList.add("last-index");
-    //console.log("is last");
+    
      previosButton.classList.remove("last-index");
   }
   
@@ -141,25 +125,6 @@ nextButton.addEventListener('click', () => {
     previousAction();
   });
 
-/*function UserAction() {
-  answers.forEach((question) => {
-    if (question === quiz[index].correct) {
-      result.corrects++;
-    }
-    else if (question === null) {
-      result.skips++;
-    } else {
-      result.wrongs++;
-    }
-  })
-  console.log(result.corrects * 5, result.wrongs * 5, result.skips);
-  alert(`total = ${result.corrects + result.wrongs + result.skips},
-    marks = ${result.corrects * 10},
-    skips = ${result.skips}
-    ${(result.corrects)*10}/${(result.corrects+result.wrongs+result.skips)*10}
-    
-    `);
-  }*/
 let buttons = "";
 quiz.forEach((question,index) => {
   buttons += `<button  id="current-index${index}" class="question-button">${index + 1} </button>`;
@@ -200,16 +165,15 @@ buttons_Array.forEach((button, position) => {
 });
 
 submitButton.addEventListener("click", () => {
-  //renderResultPreview();
   UserAction();
 });
 Autosave();
 
 function handleButtonRenderation(currentIndex,position) {
-  //console.log("i handled it ");
+
   let index = 0;
   if (position === currentIndex) {
-    //console.log("match found");
+    
     return true;
   }
   else {
@@ -226,9 +190,4 @@ else {
   }
 }
 
-/*const stateManager = {
-  answered: false,
-  currentIndex: 1,
-  visitedIndex: 10,
-};
-*/
+
